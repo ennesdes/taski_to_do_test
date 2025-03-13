@@ -1,16 +1,76 @@
-# taski_to_do_test
+# Taski To Do
 
-A new Flutter project.
+Taski To Do é um aplicativo Flutter para gerenciamento de tarefas.
 
-## Getting Started
+## Requisitos
 
-This project is a starting point for a Flutter application.
+Antes de iniciar, certifique-se de ter instalado:
 
-A few resources to get you started if this is your first Flutter project:
+- [Flutter 3.27.1](https://flutter.dev/docs/get-started/install)
+- [Dart](https://dart.dev/get-dart)
+- [Android Studio](https://developer.android.com/studio) ou [VS Code](https://code.visualstudio.com/)
+- Emulador Android ou dispositivo físico conectado
+- Xcode (para desenvolvimento iOS)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Configuração do Projeto
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone o repositório**
+   ```sh
+   git clone https://github.com/seu-usuario/taski_to_do.git
+   cd taski_to_do
+   ```
+
+2. **Instale as dependências**
+   ```sh
+   flutter pub get
+   ```
+
+3. **Configure o ambiente**
+   - Para Android:
+     ```sh
+     flutter config --android-sdk /caminho/do/android-sdk
+     ```
+   - Para iOS:
+     ```sh
+     cd ios && pod install && cd ..
+     ```
+
+## Executando o Projeto
+
+### Android
+```sh
+flutter run --release
+```
+
+### iOS
+```sh
+flutter run --release --no-codesign
+```
+
+### Debug Mode
+```sh
+flutter run
+```
+
+## Estrutura do Projeto
+
+```
+lib/
+│── main.dart            # Ponto de entrada do app
+│── ui/                  # Componentes da interface do usuário
+│   ├── views/           # Telas do aplicativo
+│   ├── widgets/         # Widgets reutilizáveis
+│── viewmodels/          # Lógica de negócios e gerenciamento de estado (com Riverpod)
+│── models/              # Modelos de dados
+│── services/            # Serviços e APIs
+│   ├── database/        # Configuração do SQLite e DAO
+│── routes/              # Configurações de rotas com GoRouter
+│── core/                # Configurações globais, temas e utilitários
+└── tests/               # Diretório para testes automatizados
+    ├── unit/            # Testes unitários
+    ├── widget/          # Testes de widgets
+    └── integration/     # Testes de integração
+```
+
+## Contato
+Para dúvidas ou sugestões, entre em contato pelo email: [ennes.silva2014@gmail.com](mailto:ennes.silva2014@gmail.com).
